@@ -1,1 +1,137 @@
 /* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+/*Variables CSS*/
+:root {
+  --header-height: 3.5rem;
+  /*-- COLORS --*/
+  /* first, second, third, fourth, fifth */
+  --first-color: #ff1054;
+  --second-color: #181818;
+  --third-color: #222222;
+  --fourth-color: #262626;
+  --fifth-color: #303030;
+  /*-- TEXT --*/
+  --body-font: "Roboto", sans-serif;
+  --text-color: #ededed;
+  /* Sizes */
+  --biggest-font-size: 2.375rem;
+  --normal-font-size: .938rem;
+  --smaller-font-size: .75rem;
+  /*-- Responsive Typography --*/
+}
+@media screen and (min-width: 1024px) {
+  :root {
+    --biggest-font-size: 5rem;
+    --normal-font-size: 1rem;
+    --smaller-font-size: .813rem;
+  }
+}
+
+/* Base */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* REUSABLE CSS CLASSES */
+.container {
+  max-width: 1024px;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.main {
+  overflow: hidden;
+}
+
+/*-- HEADER NAV --*/
+.header {
+  position: fixed;
+  width: 100%;
+  background: var(--second-color);
+  border-bottom: 10px solid var(--first-color);
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.nav {
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav_logo, .nav_toggle {
+  color: var(--text-color);
+  display: inline-flex;
+}
+.nav_logo {
+  font-weight: 700;
+}
+.nav_toggle {
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+.nav_toggle:hover {
+  color: var(--first-color);
+}
+@media screen and (max-width: 767px) {
+  .nav_menu {
+    position: fixed;
+    background: var(--third-color);
+    left: 0;
+    top: -100%;
+    width: 100%;
+    padding: 5rem 0 4rem;
+    border-radius: 0 0 1.5rem 1.5rem;
+    transition: 0.4s;
+  }
+}
+.nav_list {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+.nav_link {
+  color: var(--text-color);
+}
+.nav_link:hover {
+  color: var(--first-color);
+}
+.nav_close {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-size: 1.5rem;
+  color: var(--text-color);
+  cursor: pointer;
+}
+.nav_close:hover {
+  color: var(--first-color);
+}
+
+.show-menu {
+  top: 0;
+}

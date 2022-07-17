@@ -1,1 +1,26 @@
 /* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/*Variables CSS*/
+:root{
+  --header-height: 3.5rem;
+  /*-- COLORS --*/
+  /* first, second, third, fourth, fifth */
+  --first-color: #ff1054;
+  --second-color: #181818;
+  --third-color: #222222;
+  --fourth-color: #262626;
+  --fifth-color: #303030;
+  /*-- TEXT --*/
+  --body-font:  'Roboto', sans-serif;
+  --text-color: #ededed;
+  /* Sizes */
+  --biggest-font-size: 2.375rem;
+  --normal-font-size: .938rem;
+  --smaller-font-size: .75rem;
+  /*-- Responsive Typography --*/
+  @media screen and (min-width: 1024px) {
+    --biggest-font-size: 5rem;
+    --normal-font-size: 1rem;
+    --smaller-font-size: .813rem;
+  }
+}
